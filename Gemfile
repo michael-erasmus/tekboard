@@ -34,5 +34,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'steak'
   gem 'capybara'
-  gem 'machinist'
+  gem 'machinist', '>= 2.0.0.beta1'  
 end
