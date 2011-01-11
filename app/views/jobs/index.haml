@@ -1,6 +1,10 @@
-%h2 Latest jobs
+.add-job
+  = link_to "Post a job", new_job_path
+%h2 Latest Jobs
+%hr
 %ul
   -@jobs.each do |job|
     .li
-      =job.location.upcase
-      =job.title
+      %a
+        %span.location= job.location.upcase
+        %span.title=job.title

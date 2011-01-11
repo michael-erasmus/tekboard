@@ -1,0 +1,6 @@
+%h2 Latest jobs
+%ul
+  -@jobs.each do |job|
+    .li
+      %span.location= job.location.upcase
+      %span.title=job.title
