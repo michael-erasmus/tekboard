@@ -1,6 +1,6 @@
-.span-24.last 
-  %h1 Latest jobs
-
--@jobs.each do |job|
-  .span-4=job.location
-  .span-20.last=job.title
+%h2 Latest jobs
+%ul
+  -@jobs.each do |job|
+    .li
+      =job.location.upcase
+      =job.title

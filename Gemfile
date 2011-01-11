@@ -4,7 +4,6 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
-gem 'compass'
 gem 'barista', '~> 1.0'
 gem 'heroku'
 gem "devise", :git => "git://github.com/plataformatec/devise.git"

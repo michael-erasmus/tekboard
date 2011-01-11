@@ -1,0 +1,48 @@
+#content{ 
+  background:blue;
+}
+
+.header-container {
+    margin: 20px auto 0;
+    overflow: hidden;
+    padding: 0;
+    width: 890px;
+}
+
+#content {
+    -moz-box-shadow: 3px 3px 3px #CCCCCC;
+    background: none repeat scroll 0 0 #CFF8FA;
+    border-left: 1px solid #E8E8E8;
+    border-top: 1px solid #E8E8E8;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    padding: 0 15px;
+    width: 860px;
+}
+.header-text{
+ color: #FF7600;
+ float: left;
+}
+.header-subtext{
+ color: #CB5E00; 
+}
+h2{
+  color:#009299;
+}
+
+.jobs ul {
+    margin: 0 0 0 35px;
+    padding: 0;
+}
+
+.jobs ul li {
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+}
+
+.jobs ul li {
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+}
