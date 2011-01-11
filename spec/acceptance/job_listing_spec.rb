@@ -7,14 +7,11 @@ feature "Job Listing", %q{
 } do
 
   scenario "Browse the home page and see all the latest jobs" do
-    ruby_dev = Job.create(:title => "Ruby Developer", :location => "Johannesburg, Gauteng")
-    cs_dev = Job.create(:title => "C# Developer", :location => "Johannesburg, Gauteng")
+    ruby_dev = Job.make!(:title => "Ruby Developer")
+    cs_dev = Job.make!(:title => "C# Developer")
 
     visit homepage
-    page.should have_content(ruby_dev.title)
-    page.should have_content(cs_dev.title)
-    
-    page.should have_content(ruby_dev.location)
-    page.should have_content(cs_dev.location)
+    page_should_have_job ruby_dev    
+    page_should_have_job cs_dev
   end
 end

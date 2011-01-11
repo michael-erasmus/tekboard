@@ -6,5 +6,4 @@
   -@jobs.each do |job|
     .li
       %a
-        %span.location= job.location.upcase
-        %span.title=job.title
+        = render :partial => "job", :locals => { :job => job} 

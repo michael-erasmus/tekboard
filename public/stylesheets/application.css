@@ -62,13 +62,19 @@ div.jobs ul li a {
     padding: 10px;
 }
 
-.location{
-    color: #000000;
+span.location{
+    color: #CB5E00;
     font-weight: bold;
     margin-right: 10px;
 }
 
-div.jobs ul li span.title {
+span.company {
+    color: #000000;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+span.title {
     color: #000000;
     font-weight: normal;
     margin-right: 5px;
