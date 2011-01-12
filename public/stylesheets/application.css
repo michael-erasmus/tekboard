@@ -35,6 +35,8 @@ a {
 h2{
   color:#009299;
   font-family:Georgia, "Times","'Times New Roman'",serif;
+  margin: 0 0 13px;
+  padding: 5px 0 0;
 }
 
 .jobs ul {
@@ -42,7 +44,7 @@ h2{
     padding: 0;
 }
 
-.jobs ul li {
+#jobs ul li {
     font-size: 13px;
     list-style-type: none;
     margin: 0;
@@ -85,10 +87,10 @@ hr {
   margin-bottom: 1.5em;
 }
 
-.add-job {
+#add-job {
   margin-top: 0.5em;
 }
-.add-job a {
+#add-job a {
     -moz-border-radius: 5px 5px 5px 5px;
     background-color: #DA7620;
     color: #FFFFFF;
@@ -100,4 +102,22 @@ hr {
     text-decoration: underline;
     text-shadow: 0 1px 0 #669900;
     float:right;
+}
+
+#search_form input {
+  float:left;
+   /*margin: 15px 15px 0 2px;*/
+    padding: 3px 10px 3px 20px;
+    width: 300px; 
+}
+
+#jobs { 
+  overflow:hidden;
+  /*float:left;*/
+  width: 800px;
+}
+#nav {
+    margin: 5px 0 10px;
+    overflow: hidden;
+    width: 860px;
 }

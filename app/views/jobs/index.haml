@@ -1,9 +1,15 @@
-.add-job
-  = link_to "Post a job", new_job_path
-%h2 Latest Jobs
-%hr
-%ul
-  -@jobs.each do |job|
-    .li
-      %a
-        = render :partial => "job", :locals => { :job => job} 
+#nav
+  = form_tag("jobs/search", :method => :get, :id=>"search_form") do  
+    =text_field_tag "term",nil,:placeholder => "Search: ‘chicago’, ‘javascript’, ‘rails’…" 
+
+  #add-job
+    = link_to "Post a job", new_job_path
+
+#jobs
+  %h2 
+    %a Latest Jobs
+  %ul
+    -@jobs.each do |job|
+      %li
+        %a
+          = render :partial => "job", :locals => { :job => job} 

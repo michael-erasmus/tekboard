@@ -3,4 +3,6 @@
     @jobs = Job.all
   end
 
+  def search
+  end
 end
