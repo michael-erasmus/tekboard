@@ -11,7 +11,8 @@ feature "Job Listing", %q{
     cs_dev = Job.make!(:title => "C# Developer")
 
     visit homepage
-    page_should_have_job ruby_dev    
-    page_should_have_job cs_dev
+    Job.latest.each do |job|
+      page_should_have_job job 
+    end
   end
 end
