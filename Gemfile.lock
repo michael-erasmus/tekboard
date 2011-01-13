@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: fb4ec6e9da702aba77e536027a24aacada94ccd2
+  revision: 692f7b27ffb3e8e1cf4600a6d75ae451e1e61247
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 4c869d52a13e2c89024a60b186715adf472b62ff
+  revision: 89889591ba97664fcd3b187df77d7ddca0948e24
   specs:
     rails_admin (0.0.1)
       builder (~> 2.1.0)
@@ -45,7 +45,6 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    archive-tar-minitar (0.5.2)
     arel (2.0.6)
     barista (1.0.0)
       coffee-script (~> 2.1.1)
@@ -66,7 +65,6 @@ GEM
     coffee-script (2.1.1)
       coffee-script-source
     coffee-script-source (1.0.0)
-    columnize (0.3.2)
     configuration (1.2.0)
     culerity (0.2.14)
     diff-lcs (1.1.2)
@@ -75,17 +73,16 @@ GEM
     ffi (0.6.3)
       rake (>= 0.8.7)
     haml (3.0.25)
-    heroku (1.16.2)
-      json_pure (>= 1.2.0, < 1.5.0)
+    heroku (1.17.5)
+      json (~> 1.4.6)
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
     i18n (0.5.0)
+    json (1.4.6)
     json_pure (1.4.6)
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    linecache19 (0.5.11)
-      ruby_core_source (>= 0.1.4)
     machinist (2.0.0.beta2)
     mail (2.2.14)
       activesupport (>= 2.3.6)
@@ -130,16 +127,6 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.4.0)
-    ruby-debug-base19 (0.11.24)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
-    ruby_core_source (0.1.4)
-      archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.4)
     selenium-webdriver (0.1.2)
       childprocess (~> 0.1.5)
@@ -171,6 +158,5 @@ DEPENDENCIES
   rails (= 3.0.3)
   rails_admin!
   rspec-rails
-  ruby-debug19
   sqlite3-ruby
   steak
