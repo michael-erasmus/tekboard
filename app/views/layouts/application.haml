@@ -26,10 +26,6 @@
     .container
       #header
         = render :partial => "layouts/header", layout: false
-        -if notice
-          .notice=notice
-        -if alert 
-          .alert=alert 
       #content
         = yield
       #footer
