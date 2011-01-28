@@ -114,10 +114,14 @@ hr {
 #jobs { 
   overflow:hidden;
   /*float:left;*/
-  width: 800px;
+  width: 860px;
 }
 #nav {
     margin: 5px 0 10px;
     overflow: hidden;
     width: 860px;
+}
+
+.date{
+  float:right;
 }
