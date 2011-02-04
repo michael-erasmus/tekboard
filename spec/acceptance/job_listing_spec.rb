@@ -6,12 +6,12 @@ feature "Job Listing", %q{
   I want to look at all the lastest jobs
 } do
 
-  scenario "Browse the home page and see all the latest jobs" do
+  scenario "Browse the home page and see all the latest approved jobs" do
     ruby_dev = Job.make!(:title => "Ruby Developer")
     cs_dev = Job.make!(:title => "C# Developer")
 
     visit homepage
-    Job.latest.each do |job|
+    Job.latest_approved.each do |job|
       page_should_have_job job 
     end
   end
