@@ -92,6 +92,9 @@ GEM
     mime-types (1.16)
     nokogiri (1.4.4)
     orm_adapter (0.0.4)
+    paperclip (2.3.8)
+      activerecord
+      activesupport
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -155,6 +158,7 @@ DEPENDENCIES
   haml
   heroku
   machinist (>= 2.0.0.beta1)
+  paperclip (~> 2.3)
   rails (= 3.0.3)
   rails_admin!
   rspec-rails

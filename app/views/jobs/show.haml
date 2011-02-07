@@ -1,10 +1,15 @@
-.job-header
-  %h1= @job.title
-  %h3= "Posted #{@job.created_at.strftime("%b %d")}"
-  %h2 
-    %span= @job.company
-    %br
-    %span= "Location: #{@job.location}"
+.header-container
+  .job-header
+    %h1= @job.title
+    %h3= "Posted #{@job.created_at.strftime("%b %d")}"
+    %h2 
+      %span.company= @job.company
+      %br
+      %span.location= "Location: #{@job.location}"
+
+  .job-logo
+    = image_tag @job.logo.url
+
 .job-detail
   %strong= @job.title
 
