@@ -11,5 +11,4 @@
   %ul
     -@jobs.each do |job|
       %li
-        %a
-          = render :partial => "job", :locals => { :job => job} 
+        = link_to(render(:partial => "job", :locals => { :job => job}), job)  

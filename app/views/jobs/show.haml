@@ -1,0 +1,11 @@
+.job-header
+  %h1= @job.title
+  %h3= "Posted #{@job.created_at.strftime("%b %d")}"
+  %h2 
+    %span= @job.company
+    %br
+    %span= "Location: #{@job.location}"
+.job-detail
+  %strong= @job.title
+
+  %p= @job.description 

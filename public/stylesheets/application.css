@@ -125,3 +125,22 @@ hr {
 .date{
   float:right;
 }
+
+.job-header h1 {
+  font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Times","'Times New Roman'",serif;
+  padding-top: 15px;
+}
+
+.job-header h3 {
+  color:#888888;
+  font-size:12px;
+  font-weight:normal;
+  line-height:1em;
+  margin:0 0 20px;
+}
+
+.job-header h2 span {
+  color:#000000;
+  font-size:16px;
+  font-weight:bold;
+}

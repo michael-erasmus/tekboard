@@ -4,5 +4,6 @@ require 'machinist/active_record'
      title { "Post #{sn}" }
      location{ "Location #{sn}" }
      company {"Company #{sn}" }
+     description{"Description #{sn}"} 
      approved {true}
    end
