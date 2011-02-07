@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110207080302) do
+ActiveRecord::Schema.define(:version => 20110207085958) do
 
   create_table "histories", :force => true do |t|
     t.string   "message"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20110207080302) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "company_link"
   end
 
   create_table "users", :force => true do |t|

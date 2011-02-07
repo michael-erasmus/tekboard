@@ -2,9 +2,6 @@ a {
     color: #0066CC;
     text-decoration: none;
 }
-#content{ 
-  background:blue;
-}
 
 .header-container {
     margin: 20px auto 0;
@@ -15,7 +12,7 @@ a {
 
 #content {
     -moz-box-shadow: 3px 3px 3px #CCCCCC;
-    background: none repeat scroll 0 0 #CFF8DC;
+    background: none repeat scroll 0 0 #FFF;
     border-left: 1px solid #E8E8E8;
     border-top: 1px solid #E8E8E8;
     margin: 0 auto 5px;
@@ -70,7 +67,7 @@ span.location{
     margin-right: 10px;
 }
 
-span.company {
+.jobs span.company {
     color: #000000;
     font-weight: normal;
     margin-left: 5px;
@@ -106,14 +103,12 @@ hr {
 
 #search_form input {
   float:left;
-   /*margin: 15px 15px 0 2px;*/
     padding: 3px 10px 3px 20px;
     width: 300px; 
 }
 
 #jobs { 
   overflow:hidden;
-  /*float:left;*/
   width: 860px;
 }
 #nav {
@@ -132,6 +127,7 @@ hr {
 .job-header h1 {
   font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Times","'Times New Roman'",serif;
   padding-top: 15px;
+  color:#888888;
 }
 
 .job-header h3 {
@@ -143,7 +139,6 @@ hr {
 }
 
 .job-header h2 span {
-  color:#000000;
   font-size:16px;
   font-weight:bold;
 }

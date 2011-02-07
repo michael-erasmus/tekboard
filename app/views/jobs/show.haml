@@ -1,9 +1,11 @@
 .header-container
   .job-header
-    %h1= @job.title
+    %h1
+      = link_to @job.title, @job 
     %h3= "Posted #{@job.created_at.strftime("%b %d")}"
     %h2 
-      %span.company= @job.company
+      %a{:href => @job.company_link}
+        %span.company= @job.company
       %br
       %span.location= "Location: #{@job.location}"
 
