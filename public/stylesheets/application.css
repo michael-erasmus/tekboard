@@ -148,3 +148,11 @@ hr {
   overflow:hidden;
   width:100px;
 }
+.apply {
+  -moz-border-radius:10px 10px 10px 10px;
+  background-color:#EFEBE3;
+  color:#000000;
+  margin: 0 0 15px;
+  overflow:hidden;
+  padding:20px 20px 15px;
+}
