@@ -169,3 +169,22 @@ hr {
   overflow:hidden;
   padding:20px 20px 15px;
 }
+
+label {
+  display:block;
+  color:#888888;
+}
+
+fieldset {
+  margin-top: 15px;
+  border: none;
+}
+ legend {
+  color:#CB5E00;
+}
+.field {
+  margin-bottom:20px;
+}
+.hint {
+  color:#0066CC;
+}
