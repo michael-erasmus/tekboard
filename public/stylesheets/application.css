@@ -21,6 +21,7 @@ a {
     overflow: hidden;
     padding: 0 15px;
     width: 860px;
+    margin-bottom: 55px;
 }
 .header-text{
  color: #FF7600;
@@ -34,6 +35,9 @@ a {
 }
 .header-subtext{
  color: #CB5E00; 
+}
+.placeholder-text{
+ color: #9E9E9E;
 }
 h2{
   color:#009299;
@@ -116,7 +120,7 @@ hr {
 
 #search_form input {
   float:left;
-  padding: 3px 10px 3px 20px;
+  padding: 3px 10px 3px 25px;
   width: 300px;
   background:url("/images/search.png") no-repeat scroll 5px 3px #FFFFFF; 
 }

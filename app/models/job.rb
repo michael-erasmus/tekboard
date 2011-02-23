@@ -4,7 +4,7 @@ class Job < ActiveRecord::Base
   validates :location, :presence => true
   validates :description, :presence => true
   validates :application_instructions, :presence => true
-  validates :company_name, :presence => true
+  validates :company, :presence => true
   validates :company_link, :presence => true
   validates :company_email, :presence => true
 
