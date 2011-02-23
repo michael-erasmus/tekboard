@@ -1,28 +1,36 @@
-= form_for(@job) do |f|
+= form_for(@job, :html => {:class => 'validate'}) do |f|
   %fieldset
-    %legend JOB DETAILS
+    %legend Job Details 
     .field
       = f.label "Job title" 
-      = f.text_field :title
+      = f.text_field :title, :required => ''
+      %span.error Please enter a job title
       .hint Something like: "C# developer" or "Experienced Database Admin" 
     .field
       = f.label :location
-      = f.text_field :location
+      = f.text_field :location, :required => ''
+      %span.error Please enter a location
+      .hint "Johannesburg", "Cape Town" or "Anywhere" 
     .field
       = f.label :description
-      = f.text_area :description
+      .error Please write a job description 
+      = f.text_area :description, :required => ''
     .field
       = f.label :application_instructions
-      = f.text_area :application_instructions
+      .error Please explain how a candidate can apply for the position 
+      = f.text_area :application_instructions, :required => ''
   %fieldset
-    %legend COMPANY DETAILS
+    %legend Company Details 
     .field
       = f.label :company
-      = f.text_field :company
+      = f.text_field :company, :required => ''
+      %span.error Please enter your company name 
     .field
       = f.label :company_link
-      = f.text_field :company_link
+      = f.text_field :company_link, :required => ''
+      %span.error Please enter your company url 
     .field
       = f.label :company_email
-      = f.text_field :company_email
-  = f.submit "Create Job Posting" 
+      = f.email_field :company_email, :required => ''
+      %span.error Please enter your email 
+  %button.validate{:type => "submit"} Create Job Posting
