@@ -37,7 +37,12 @@ setupFormsValidation = function(){
   $('form.validate').submit(validateForm);
 }
 
+setupWysiwyg = function(){
+    $('.wysiwyg').wysiwyg();
+}
+
 $(document).ready(function() {
   setupFormsValidation();
   modernize();
+  setupWysiwyg();
 });

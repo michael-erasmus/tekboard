@@ -14,7 +14,7 @@
     .field
       = f.label :description
       .error Please write a job description 
-      = f.text_area :description, :required => ''
+      = f.text_area :description, :required => '', :class => 'wysiwyg'
     .field
       = f.label :application_instructions
       .error Please explain how a candidate can apply for the position 
