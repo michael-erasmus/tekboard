@@ -38,7 +38,22 @@ setupFormsValidation = function(){
 }
 
 setupWysiwyg = function(){
-    $('.wysiwyg').wysiwyg();
+    $('.wysiwyg').wysiwyg({
+        initialContent: '',
+        rmUnusedControls: true,
+        controls: {
+          bold: { visible : true },
+          italic: { visible : true },
+          underline: { visible : true },
+          indent: { visible : true },
+          outdent: { visible : true },
+          insertUnorderedList : { visible : true },
+          h1: { visible : true },
+          h2: { visible : true },
+          h3: { visible : true },
+          html: { visible : true }
+        }
+    });
 }
 
 $(document).ready(function() {

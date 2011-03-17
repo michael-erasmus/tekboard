@@ -229,3 +229,6 @@ form button:hover {
 form .error{
   display:none;
 }
+.wysiwyg{
+  width: 90%;
+}
