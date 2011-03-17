@@ -1,4 +1,4 @@
-= form_for(@job, :html => {:class => 'validate'}) do |f|
+= form_for(@job, :html => {:class => 'validate', :multipart => true }) do |f|
   %fieldset
     %legend Job Details 
     .field
@@ -29,6 +29,9 @@
       = f.label :company_link
       = f.text_field :company_link, :required => ''
       %span.error Please enter your company url 
+    .field
+      = f.label :logo, "Company Logo"
+      = f.file_field :logo
     .field
       = f.label :company_email
       = f.email_field :company_email, :required => ''

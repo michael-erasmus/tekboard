@@ -13,7 +13,7 @@
     @job = Job.new
   end
   def create
-    @job = Job.new(params["job"])
+    @job = Job.new(params[:job])
 
     @job.save
   end
