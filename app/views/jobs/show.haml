@@ -15,7 +15,7 @@
 .job-detail
   %strong= @job.title
 
-  %p= @job.description 
+  %p= raw @job.description 
 
   .apply
     %h3 Apply for this position
