@@ -61,7 +61,7 @@ div.wysiwyg ul.toolbar li.removeFormat { background-position: -80px -63px; }
 
 div.wysiwyg ul.toolbar li.empty { background-position: -64px -80px; }
 
-div.wysiwyg iframe { border: 1px solid #999; clear: left;
+div.wysiwyg iframe { clear: left;
 background-color:white; padding:3px; margin:0;
 }
 
