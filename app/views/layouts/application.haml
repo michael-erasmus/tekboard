@@ -31,4 +31,4 @@
       #content
         = yield
       #footer
-        /= haml :_footer, layout: false
+        = render :partial => "layouts/footer", layout: false
