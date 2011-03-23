@@ -9,8 +9,9 @@
       %br
       %span.location= "Location: #{@job.location}"
 
-  .job-logo
-    = image_tag @job.logo.url
+  -if @job.has_logo? 
+    .job-logo
+      = image_tag @job.logo.url
 
 .job-detail
   %strong= @job.title
