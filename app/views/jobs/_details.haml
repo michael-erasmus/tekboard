@@ -1,0 +1,23 @@
+.header-container
+  .job-header
+    %h1
+      = link_to @job.title, @job 
+    %h3= "Posted #{@job.created_at.strftime("%b %d")}"
+    %h2 
+      %a{:href => @job.company_link}
+        %span.company= @job.company
+      %br
+      %span.location= "Location: #{@job.location}"
+
+  -if @job.has_logo? 
+    .job-logo
+      = image_tag @job.logo.url(:thumb)
+
+.job-detail
+  %strong= @job.title
+
+  %p= raw @job.description 
+
+  .apply
+    %h3 Apply for this position
+    = @job.application_instructions

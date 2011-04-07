@@ -1,0 +1,8 @@
+= render :partial => 'details' 
+
+= form_for(@job) do |f|
+  = f.hidden_field(:state, :value => 'new')
+  = f.submit "Create Job Listing", :class => 'submit'
+
+  or 
+  %a{:href => edit_job_path(@job)} Re-edit Job

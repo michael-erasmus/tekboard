@@ -1,0 +1,48 @@
+= form_for(@job, :html => {:class => 'validate', :multipart => true }) do |f|
+  -if @job.errors.any? 
+    #errorExplanation
+      %h3
+        = pluralize(@job.errors.count, "error") 
+        prohibited this post from being saved:
+        %ul
+          -@job.errors.full_messages.each do |msg| 
+            %li= msg 
+  %fieldset
+    %legend Job Details 
+    .field
+      = f.label "Job title" 
+      = f.text_field :title, :required => ''
+      %span.error Please enter a job title
+      .hint Something like: "C# developer" or "Experienced Database Admin" 
+    .field
+      = f.label :location
+      = f.text_field :location, :required => ''
+      %span.error Please enter a location
+      .hint "Johannesburg", "Cape Town" or "Anywhere" 
+    .field
+      = f.label :description
+      .error Please write a job description 
+      = f.text_area :description, :required => '', :class => 'wysiwyg'
+    .field
+      = f.label :application_instructions
+      .error Please explain how a candidate can apply for the position 
+      = f.text_area :application_instructions, :required => ''
+  %fieldset
+    %legend Company Details 
+    .field
+      = f.label :company
+      = f.text_field :company, :required => ''
+      %span.error Please enter your company name 
+    .field
+      = f.label :company_link
+      = f.text_field :company_link, :required => ''
+      %span.error Please enter your company url 
+    .field
+      = f.label :logo, "Company Logo"
+      = f.file_field :logo
+    .field
+      = f.label :company_email
+      = f.email_field :company_email, :required => ''
+      %span.error Please enter your email 
+  = f.submit "Preview", :class=> "submit", :name => "preview" 
+  = f.submit "Create Job Posting", :class=>"submit", :name => "create"
