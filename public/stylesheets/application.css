@@ -1,3 +1,6 @@
+body{
+  background:url("/images/bgpattern.gif");
+}
 a {
     color: #0066CC;
     text-decoration: none;
@@ -34,7 +37,7 @@ a {
  color: #FF7600;
 }
 .header-subtext{
- color: #CB5E00; 
+ color: black; 
 }
 .placeholder-text{
  color: #9E9E9E;
@@ -133,7 +136,7 @@ hr {
   width: 860px;
 }
 #nav {
-    margin: 5px 0 10px;
+    margin: 18px 0 10px;
     overflow: hidden;
     width: 860px;
 }
