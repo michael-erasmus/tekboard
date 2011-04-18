@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails'
 
 gem 'haml'
 gem 'barista', '~> 1.0'
