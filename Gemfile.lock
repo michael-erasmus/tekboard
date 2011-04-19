@@ -75,7 +75,7 @@ GEM
     haml (3.0.25)
     heroku (1.20.1)
       launchy (~> 0.3.2)
-      rest-client (>= 1.4.0, < 1.7.0)
+      rest-client (< 1.7.0, >= 1.4.0)
     i18n (0.5.0)
     json_pure (1.5.1)
     launchy (0.3.7)

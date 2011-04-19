@@ -25,10 +25,10 @@ modernize = function(){
 }
 
 validateForm = function(){
-  $(":input[required]").siblings(".error").css('display', 'none');
+  $(":input[required]").siblings(".error.js").css('display', 'none');
   var empty = $(":input[required][value='']")
-  empty.siblings('.error').css('display', 'inline');
-  empty.siblings('div.error').css('display', 'block');
+  empty.siblings('.error.js').css('display', 'inline');
+  empty.siblings('div.error.js').css('display', 'block');
   return empty.length == 0;
 
 }

@@ -1,48 +1,57 @@
+.note
+  %p Job ads are currently free, but will be charged for in future.
+  %p Job ads will be live for 30 days where after you'll be able to reactivate it need be.
+  %p 
+    %strong You may not post a job for someone else. Only jobs that are advertised by employers will be accepted! 
+  %p You may not advertise multiple positions in the same advert. 
+
 = form_for(@job, :html => {:class => 'validate', :multipart => true }) do |f|
-  -if @job.errors.any? 
-    #errorExplanation
-      %h3
-        = pluralize(@job.errors.count, "error") 
-        prohibited this post from being saved:
-        %ul
-          -@job.errors.full_messages.each do |msg| 
-            %li= msg 
   %fieldset
     %legend Job Details 
     .field
       = f.label "Job title" 
       = f.text_field :title, :required => ''
-      %span.error Please enter a job title
+      %span.error.js Please enter a job title
       .hint Something like: "C# developer" or "Experienced Database Admin" 
     .field
       = f.label :location
       = f.text_field :location, :required => ''
-      %span.error Please enter a location
+      %span.error.js Please enter a location
       .hint "Johannesburg", "Cape Town" or "Anywhere" 
     .field
       = f.label :description
-      .error Please write a job description 
+      .error.js Please write a job description 
       = f.text_area :description, :required => '', :class => 'wysiwyg'
+      .hint Try and list the non-negotiable job requirements first and make them as explicit as possible. 
+      .hint Try and describe the type of work that the candidate will do as well as your company and working environment.
+      .hint Try to keep it short. Please avoid vague, obvious and unnecessary requirements, like "Good team player".  
+      .hint Try and keep it light, but don't overdo the humor.
     .field
       = f.label :application_instructions
-      .error Please explain how a candidate can apply for the position 
+      .error.js Please explain how a candidate can apply for the position 
       = f.text_area :application_instructions, :required => ''
+      .hint How can the candidate apply? Please list all the options.
   %fieldset
     %legend Company Details 
     .field
       = f.label :company
       = f.text_field :company, :required => ''
-      %span.error Please enter your company name 
+      %span.error.js Please enter your company name 
     .field
       = f.label :company_link
       = f.text_field :company_link, :required => ''
-      %span.error Please enter your company url 
+      %span.error.js Please enter your company url 
     .field
       = f.label :logo, "Company Logo"
       = f.file_field :logo
     .field
       = f.label :company_email
       = f.email_field :company_email, :required => ''
-      %span.error Please enter your email 
+      %span.error.js Please enter your email 
+      -@job.errors[:company_email].each do |msg| 
+        %span.error.validation 
+          The company Email is 
+          =msg
+
   = f.submit "Preview", :class=> "submit", :name => "preview" 
   = f.submit "Create Job Posting", :class=>"submit", :name => "create"
