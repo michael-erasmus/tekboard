@@ -241,11 +241,17 @@ form .error.js{
 }
 
 #footer {
-    margin: 20px auto 0;
+    margin: 0 auto 55px;
+    background: #FFF;
     overflow: hidden;
     padding: 0;
     width: 890px;
+    bottom: 0;
 }
+.footer-container{
+  margin: 10px;
+}
+
 .note {
   margin-top: 20px;
   margin-bottom: 30px;

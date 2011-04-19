@@ -1,8 +1,10 @@
 .footer
   .footer-container
     .footer-subscribe
-      %p
+      %small
         = link_to "Subcribe to the jobs RSS feed",  'jobs.rss'
         or 
         = link_to "follow @techboardcoza on Twitter",  'http://twitter.com/techboardcoza'
         to find out when new jobs are posted.
+        You are welcome to send any feedback, questions or suggestions to
+        = mail_to 'info@techboard.co.za'
