@@ -46,4 +46,15 @@ Tekboard::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # mail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'techboard.co.za',
+    :user_name            => 'notify@techboard.co.za',
+    :password             => 'techboard',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
 end

@@ -37,6 +37,7 @@ class JobsController < ApplicationController
         redirect_to preview_job_path(@job)
       else
         render 'jobs/thanks'
+        JobsMailer.new_job(@job).deliver
       end
     end
   end
@@ -51,6 +52,7 @@ class JobsController < ApplicationController
         redirect_to preview_job_path(@job)
       else
         render 'jobs/thanks'
+        JobsMailer.new_job(@job).deliver
       end
     end
   end
