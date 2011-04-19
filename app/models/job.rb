@@ -14,6 +14,10 @@ class Job < ActiveRecord::Base
     self.where(:state => 'active', :activated_date=> (Time.now.midnight - 30.days)..Time.now)
   end
 
+  def self.expired
+    self.where('state = ? and activated_date < ?','active', (Time.now.midnight - 30.days))
+  end
+
   def has_logo?()
     logo.file?
   end
