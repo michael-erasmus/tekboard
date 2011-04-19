@@ -233,7 +233,7 @@ form .submit:hover {
 	text-decoration: none;
 }
 
-form .error{
+form .error.js{
   display:none;
 }
 .wysiwyg{
@@ -247,5 +247,12 @@ form .error{
     width: 890px;
 }
 .note {
+  margin-top: 20px;
   margin-bottom: 30px;
+}
+input{ 
+  width: 80%;
+}
+textarea{
+  width: 80%;
 }

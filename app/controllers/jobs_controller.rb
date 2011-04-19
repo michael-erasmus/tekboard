@@ -1,6 +1,11 @@
 class JobsController < ApplicationController
   def index
     @jobs = Job.active  
+
+    respond_to do |format|
+      format.html # index.haml
+      format.rss { render :layout => false } #index.rss.builder
+    end
   end
 
   def search
@@ -8,6 +13,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+
   end
 
   def new

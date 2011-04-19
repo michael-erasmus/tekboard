@@ -6,7 +6,8 @@ class Job < ActiveRecord::Base
   validates :application_instructions, :presence => true
   validates :company, :presence => true
   validates :company_link, :presence => true
-  validates :company_email, :presence => true
+  validates :company_email, :presence => true, 
+     :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }                 
 
   before_save :set_activation_date
 
