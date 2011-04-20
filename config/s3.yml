@@ -1,0 +1,12 @@
+development:
+  bucket: techboard-logos-dev
+  access_key_id: 0WA96BQHKZ3E5DPM6602  
+  secret_access_key: alti6scn2+Se5kdsQVIVib9w2r8cSU5c9b8gOs8Q
+test:
+  bucket: techboard-logos-test
+  access_key_id: 0WA96BQHKZ3E5DPM6602
+  secret_access_key: alti6scn2+Se5kdsQVIVib9w2r8cSU5c9b8gOs8Q
+production:
+  bucket: techboard-logos-production
+  access_key_id: 0WA96BQHKZ3E5DPM6602 
+  secret_access_key: alti6scn2+Se5kdsQVIVib9w2r8cSU5c9b8gOs8Q
