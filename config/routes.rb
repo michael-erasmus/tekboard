@@ -5,7 +5,6 @@ Tekboard::Application.routes.draw do
   resources :jobs
   root :to => "jobs#index"
   match 'jobs/preview/:id' => 'jobs#preview', :as => :preview_job
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
