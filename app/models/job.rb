@@ -1,5 +1,10 @@
 class Job < ActiveRecord::Base
-  has_attached_file :logo, :styles => { :medium => "200x200>", :thumb => "100x100>" }
+  has_attached_file :logo, 
+    :styles => { :medium => "200x200>", :thumb => "100x100>" },
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :path => "/:style/:id/:filename"
+
   validates :title, :presence => true
   validates :location, :presence => true
   validates :description, :presence => true
