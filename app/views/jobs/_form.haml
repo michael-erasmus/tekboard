@@ -47,6 +47,7 @@
     .field
       = f.label :company_email
       = f.email_field :company_email, :required => ''
+      .hint Please make sure this is correct. It's the only way we can contact you! We will only email you regarding your job post and nothing else.
       %span.error.js Please enter your email 
       -@job.errors[:company_email].each do |msg| 
         %span.error.validation 
