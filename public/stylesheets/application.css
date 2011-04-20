@@ -136,6 +136,9 @@ hr {
   overflow:hidden;
   width: 860px;
 }
+.job-detail {
+  padding: 0px 0px 20px 10px;
+}
 #nav {
     margin: 18px 0 10px;
     overflow: hidden;
