@@ -4,7 +4,7 @@
       = link_to @job.title, @job 
     %h3= "Posted #{@job.created_at.strftime("%b %d")}"
     %h2 
-      %a{:href => @job.company_link}
+      %a{:href => @job.company_link_url}
         %span.company= @job.company
       %br
       %span.location= "Location: #{@job.location}"

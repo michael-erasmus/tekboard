@@ -87,9 +87,6 @@ span.location{
     margin-right: 10px;
 }
 
-span:hover {
-  color:#FFF;
-}
 .jobs span.company {
     color: #000000;
     font-weight: normal;
