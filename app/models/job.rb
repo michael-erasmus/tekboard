@@ -28,6 +28,10 @@ class Job < ActiveRecord::Base
     logo.file?
   end
 
+  def company_link_url
+    company_link.include?("http://") ? company_link : "http://#{company_link}"
+  end
+
   private
   def set_activation_date
     self.activated_date = Time.now if state == 'active'
