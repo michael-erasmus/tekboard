@@ -1,0 +1,27 @@
+!!! html
+%head
+  %meta{:charset => 'utf8'}
+%body
+  
+  %p
+    Your job post:
+    %br
+    %br
+    %strong= @job.title
+    %br
+    %br
+    Has been approved and is live at 
+    %br
+    = "http://www.techboard.co.za#{url_for(@job)}"
+  %p
+    It will be live for 30 days, where after you'll be able to renew it if need be. 
+    %br
+    We'll send you an email just before it expires.
+    %br
+    If you have any questions, don't hesitate to contact us at 
+    = mail_to 'info@techboard.co.za'
+
+  %p
+    Kind Regards,
+    %br
+    The techboard team

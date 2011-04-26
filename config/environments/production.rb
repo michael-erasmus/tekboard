@@ -54,7 +54,7 @@ Tekboard::Application.configure do
     :port                 => 587,
     :domain               => 'techboard.co.za',
     :user_name            => 'notify@techboard.co.za',
-    :password             => 'techboard',
+    :password             => 'techboard01',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 end
