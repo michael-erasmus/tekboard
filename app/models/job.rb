@@ -5,6 +5,8 @@ class Job < ActiveRecord::Base
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :path => "/:style/:id/:filename"
 
+  has_friendly_id :company_and_title, :use_slug => true
+
   validates :title, :presence => true
   validates :location, :presence => true
   validates :description, :presence => true
@@ -35,6 +37,10 @@ class Job < ActiveRecord::Base
 
   def is_active?
     state == 'active'
+  end
+  
+  def company_and_title
+    "#{company} #{title}"
   end
 
   private

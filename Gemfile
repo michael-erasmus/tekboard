@@ -10,6 +10,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "paperclip", "~> 2.3"
 gem 'aws-s3'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'rspec-rails'
