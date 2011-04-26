@@ -50,6 +50,7 @@ GEM
       builder
       mime-types
       xml-simple
+    babosa (0.3.3)
     barista (1.0.0)
       coffee-script (~> 2.1.1)
     bcrypt-ruby (2.1.4)
@@ -76,6 +77,8 @@ GEM
       abstract (>= 1.0.0)
     ffi (1.0.7)
       rake (>= 0.8.7)
+    friendly_id (3.2.1.1)
+      babosa (~> 0.3.0)
     haml (3.0.25)
     heroku (1.20.1)
       launchy (~> 0.3.2)
@@ -161,6 +164,7 @@ DEPENDENCIES
   barista (~> 1.0)
   capybara
   devise!
+  friendly_id
   haml
   heroku
   machinist (>= 2.0.0.beta1)
