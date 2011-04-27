@@ -1,4 +1,7 @@
 class Job < ActiveRecord::Base
+  #Important - protected fields from mass assignment here
+  attr_protected :state, :activated_date
+  
   has_attached_file :logo, 
     :styles => { :medium => "200x200>", :thumb => "100x100>" },
     :storage => :s3,
