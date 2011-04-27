@@ -37,14 +37,14 @@ class JobsController < ApplicationController
         redirect_to preview_job_path(@job)
       else
         render 'jobs/thanks'
-        JobsMailer.new_job(@job).deliver
       end
     end
   end
 
   def update
-    state = params[:preview] ? "preview" : "update"
+    state = params[:preview] ? "preview" : "new"
     @job = Job.find(params[:id])
+    @job.state = state
     if !@job.save
       render :action => 'edit'
     else
@@ -52,7 +52,6 @@ class JobsController < ApplicationController
         redirect_to preview_job_path(@job)
       else
         render 'jobs/thanks'
-        JobsMailer.new_job(@job).deliver
       end
     end
   end
