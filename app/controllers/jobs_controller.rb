@@ -28,8 +28,8 @@ class JobsController < ApplicationController
   def create
     state = params[:preview] ? "preview" : "new"
 
-    @job = Job.new(params[:job].merge(:state => state))
-
+    @job = Job.new(params[:job])
+    @job.state = state
     if !@job.save
       render :action => 'new'
     else
