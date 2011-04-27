@@ -19,8 +19,9 @@ class Job < ActiveRecord::Base
   validates :company_email, :presence => true, 
      :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }                 
 
-  before_save :set_activation_date, :if => :state_changed?
-  before_save :mail_if_active, :if => :state_changed?
+  before_save do |j|
+      j.activated_date = Time.now if j.is_active? && j.state_changed?
+  end
 
   def self.active
     self.where(:state => 'active', :activated_date=> (Time.now.midnight - 30.days)..Time.now)
@@ -46,12 +47,4 @@ class Job < ActiveRecord::Base
     "#{company} #{title}"
   end
 
-  private
-  def set_activation_date
-    self.activated_date = Time.now if is_active? 
-  end
-
-  def mail_if_active
-    JobsMailer.active_job(self).deliver if is_active? 
-  end
 end
