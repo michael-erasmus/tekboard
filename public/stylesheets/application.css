@@ -244,8 +244,7 @@ form .error.js{
 #footer {
     margin: 0 auto 55px;
     background: #FFF;
-    overflow: hidden;
-    padding: 0;
+    padding: 6px;
     width: 890px;
     bottom: 0;
 }

@@ -1,5 +1,8 @@
 .footer
   .footer-container
+    /fb
+    #fb-root
+    %fb:like{href: request.url, :send=>"true", :width=>"vi0", :show_faces=>"true", :font=>"verdana"}
     .footer-subscribe
       %small
         = link_to "Subcribe to the jobs RSS feed",  'jobs.rss'
@@ -8,3 +11,4 @@
         to find out when new jobs are posted.
         Send any feedback, questions or suggestions to
         = mail_to 'info@techboard.co.za'
+
