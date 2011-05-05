@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-
+gem 'jquery-rails', '>= 0.2.6'
 gem 'haml'
 gem 'barista', '~> 1.0'
 gem 'heroku'
