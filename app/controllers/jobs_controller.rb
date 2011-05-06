@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.active.shuffle #All jobs have an equal chance of being first  
+    @jobs = Job.active.sort_by(&:activated_date).reverse
 
     respond_to do |format|
       format.html # index.haml
@@ -22,7 +22,7 @@ class JobsController < ApplicationController
 
   def edit
     @job = Job.find(params[:id])
-
+    render text: "You are not authorized to edit this job", :status => :unauthorized if @job.is_active?  
   end
 
   def create
