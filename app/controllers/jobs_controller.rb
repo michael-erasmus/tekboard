@@ -22,7 +22,7 @@ class JobsController < ApplicationController
 
   def edit
     @job = Job.find(params[:id])
-
+    render text: "You are not authorized to edit this job", :status => :unauthorized if @job.is_active?  
   end
 
   def create
