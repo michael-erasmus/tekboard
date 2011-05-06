@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.active.shuffle #All jobs have an equal chance of being first  
+    @jobs = Job.active.sort_by(&:activated_date).reverse
 
     respond_to do |format|
       format.html # index.haml
