@@ -117,8 +117,9 @@ hr {
     padding: 8px 12px;
     text-align: center;
     text-decoration: underline;
-    text-shadow: 0 1px 0 #669900;
+    text-shadow: 2px 1px 0 #CB5E00;
     float:right;
+    border:2px solid #FABF8C;
 }
 
 #search_form input {
