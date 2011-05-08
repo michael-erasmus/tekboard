@@ -3,6 +3,9 @@
     /fb
     #fb-root
     %fb:like{href: request.url, :send=>"true", :width=>"vi0", :show_faces=>"true", :font=>"verdana"}
+    /twitter
+    =link_to "tweet", "http://twitter.com/share", :class=>'twitter-share-button', "data-count" => "horizontal", "data-via"=>"techboardcoza"
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     .footer-subscribe
       %small
         = link_to "Subcribe to the jobs RSS feed",  'jobs.rss'
