@@ -1,6 +1,7 @@
 #nav
-  = form_tag("jobs/search", :method => :get, :id=>"search_form") do  
-    =text_field_tag "term",nil,:placeholder => "Search: ‘Johannesburg’, ‘C#’, ‘rails’…" 
+  = form_tag('/', id:"search_form") do |f| 
+    = text_field_tag :query, params[:query],:placeholder => "Search: ‘Johannesburg’, ‘C#’, ‘rails’…"
+    = submit_tag "search"
 
   #add-job
     = link_to "Post a job for free", new_job_path

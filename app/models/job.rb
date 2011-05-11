@@ -31,6 +31,13 @@ class Job < ActiveRecord::Base
     self.where('state = ? and activated_date < ?','active', (Time.now.midnight - 30.days))
   end
 
+  def self.search_active(search)
+    if search
+     active.where('title LIKE ?', "%#{search}%")
+    else
+     active 
+    end
+  end
   def has_logo?()
     logo.file?
   end
@@ -46,5 +53,4 @@ class Job < ActiveRecord::Base
   def company_and_title
     "#{company} #{title}"
   end
-
 end

@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.active.sort_by(&:activated_date).reverse
+    #render :text => params[:query]
+    @jobs = Job.search_active(params[:query]).order(:activated_date).reverse
 
     respond_to do |format|
       format.html # index.haml
