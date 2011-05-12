@@ -6,8 +6,8 @@
     %h2 
       %a{:href => @job.company_link_url}
         %span.company= @job.company
-      %br
-      %span.location= "Location: #{@job.location}"
+
+    %span.location= "Location: #{@job.location}"
 
   -if @job.has_logo? 
     .job-logo

@@ -40,5 +40,18 @@ module Tekboard
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+    TWITTER_CONSUMER_KEY = '9ZPl1Wg1anNv34dA0RNTQ'
+    TWITTER_CONSUMER_SECRET = 'wCGcmIzAQBGqOc1dvmLlc0UqtnbDbJetesupwcQbBJI'
+    TWITTER_ACCESS_TOKEN = '284604875-h1WBj4fqdPbBLdqHKGLV52JFMYkAwrudDFtYVcNf'
+    TWITTER_ACCESS_SECRET = 'AFIG3UmSu20ge21lk1HR8Fs20GZao6VZRg3RRtgTnc'
+
+
+    Twitter.configure do |config|
+      config.consumer_key = TWITTER_CONSUMER_KEY
+      config.consumer_secret = TWITTER_CONSUMER_SECRET
+      config.oauth_token = TWITTER_ACCESS_TOKEN
+      config.oauth_token_secret = TWITTER_ACCESS_SECRET
+    end
   end
 end
