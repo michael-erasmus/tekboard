@@ -29,7 +29,7 @@ a {
 .header-text{
  color: #FF7600;
  float: left;
- text-shadow: #CB5E00 0px 3px 3px; 
+ text-shadow: #CB5E00 0px 2px 0px, #FFB06B 0px -1px 0px; 
  font-size: 4em;
  /*font-family:Georgia, "Times","'Times New Roman'",serif;*/
 }
@@ -117,8 +117,9 @@ hr {
     padding: 8px 12px;
     text-align: center;
     text-decoration: underline;
-    text-shadow: 0 1px 0 #669900;
+    text-shadow: 2px 1px 0 #CB5E00;
     float:right;
+    border:2px solid #FABF8C;
 }
 
 #search_form input {

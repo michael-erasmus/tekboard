@@ -11,6 +11,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "paperclip", "~> 2.3"
 gem 'aws-s3'
 gem 'friendly_id'
+gem 'twitter'
+gem 'bitly'
 
 group :development, :test do
   gem 'rspec-rails'

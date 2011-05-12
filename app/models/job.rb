@@ -1,3 +1,5 @@
+require 'twitter'
+
 class Job < ActiveRecord::Base
   #Important - protected fields from mass assignment here
   attr_protected :state, :activated_date
@@ -52,5 +54,12 @@ class Job < ActiveRecord::Base
   
   def company_and_title
     "#{company} #{title}"
+  end
+  def tweet
+    #Twitter.update("#{company_and_title} http://techboard.co.za/jobs/#{cached_slug}")
+    bitly = Bitly.new('techboard','R_17b2bf51119ed9aa76f1175d47e9a60f')
+    short_url = bitly.shorten("http://techboard.co.za/jobs/#{cached_slug}") 
+    
+    Twitter.update(company_and_title + ' ' + short_url.shorten)
   end
 end
