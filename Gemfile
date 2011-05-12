@@ -13,6 +13,7 @@ gem 'aws-s3'
 gem 'friendly_id'
 gem 'twitter'
 gem 'bitly'
+gem 'tweet-button'
 
 group :development, :test do
   gem 'rspec-rails'

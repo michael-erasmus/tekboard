@@ -62,4 +62,7 @@ class Job < ActiveRecord::Base
     
     Twitter.update(company_and_title + ' ' + short_url.shorten)
   end
+  def tweet_text
+    "#{location} - #{title} - #{company} #it #job #techboard"
+  end
 end
