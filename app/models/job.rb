@@ -26,7 +26,8 @@ class Job < ActiveRecord::Base
   end
 
   def self.active
-    self.where(:state => 'active', :activated_date=> (Time.now.midnight - 30.days)..Time.now)
+    #self.where(:state => 'active', :activated_date=> (Time.now.midnight - 30.days)..Time.now)
+    self.where(:state => 'active')
   end
 
   def self.expired
